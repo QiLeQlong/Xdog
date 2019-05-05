@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+
+<robot name="xdog" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  
+  <!-- Transmissions for ros_control -->
+  <xacro:macro name="transmission_block" params="joint_name">
+    <transmission name="trans1">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${joint_name}">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="motor1">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+  </xacro:macro>
+
+  <xacro:transmission_block joint_name="Joint_13"/>
+  <xacro:transmission_block joint_name="Joint_12"/>
+  <xacro:transmission_block joint_name="Joint_11"/>
+  <xacro:transmission_block joint_name="Joint_23"/>
+  <xacro:transmission_block joint_name="Joint_22"/>
+  <xacro:transmission_block joint_name="Joint_21"/>
+  <xacro:transmission_block joint_name="Joint_33"/>
+  <xacro:transmission_block joint_name="Joint_32"/>
+  <xacro:transmission_block joint_name="Joint_31"/>
+  <xacro:transmission_block joint_name="Joint_43"/>
+  <xacro:transmission_block joint_name="Joint_42"/>
+  <xacro:transmission_block joint_name="Joint_41"/>
+
+</robot>

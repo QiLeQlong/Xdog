@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<robot>
+  <!-- ros_control plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/xdog</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      <legacyModeNS>true</legacyModeNS>
+    </plugin>
+  </gazebo>
+
+  <gazebo reference="Joint_13">
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
+
+  <gazebo reference="Joint_12">
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
+
+  <gazebo reference="Joint_11">
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
+
+  <gazebo reference="Joint_23">
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
+
+  <gazebo reference="rJoint_22">
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
+
+  <gazebo reference="Joint_21">
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
+
+  <gazebo reference="Joint_33">
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
+
+  <gazebo reference="Joint_32">
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
+
+  <gazebo reference="Joint_31">
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
+
+  <gazebo reference="Joint_43">
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
+
+  <gazebo reference="Joint_42">
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
+
+  <gazebo reference="Joint_41">
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
+
+
+  <gazebo reference="Link_11">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+  </gazebo>
+  <gazebo reference="Link_12">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+  </gazebo>
+  <gazebo reference="Link_13">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+  </gazebo>
+  <gazebo reference="Link_21">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+  </gazebo>
+  <gazebo reference="Link_22">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+  </gazebo>
+  <gazebo reference="Link_23">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+  </gazebo>
+  <gazebo reference="Link_31">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+  </gazebo>
+  <gazebo reference="Link_32">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+  </gazebo>
+  <gazebo reference="Link_33">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+  </gazebo>
+  <gazebo reference="Link_41">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+  </gazebo>
+  <gazebo reference="Link_42">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+  </gazebo>
+  <gazebo reference="Link_43">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+  </gazebo>
+
+
+</robot>

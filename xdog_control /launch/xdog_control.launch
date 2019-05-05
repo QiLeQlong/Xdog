@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find xdog_control)/config/xdog_control.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" ns="/xdog" args="joint_state_controller
+					 joint13_position_controller
+					 joint12_position_controller
+					 joint11_position_controller
+					 joint23_position_controller
+					 joint22_position_controller
+					 joint21_position_controller
+					 joint33_position_controller
+					 joint32_position_controller
+					 joint31_position_controller
+					 joint43_position_controller
+					 joint42_position_controller
+					 joint41_position_controller"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+	respawn="false" output="screen">
+    <remap from="/joint_states" to="/xdog/joint_states" />
+  </node>
+
+</launch>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<robot name="xdog" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find xdog_description)/urdf/xdog.urdf.xacro" />
+  <xacro:include filename="$(find xdog_description)/urdf/xdog.gazebo" />
+  <xacro:include filename="$(find xdog_description)/urdf/xdog_trans.xacro" />
+
+</robot>

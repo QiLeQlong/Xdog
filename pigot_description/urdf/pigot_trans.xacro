@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+
+<robot name="pigot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  
+
+  <!-- Transmissions for ros_control -->
+  <xacro:macro name="transmission_block" params="joint_name">
+    <transmission name="trans1">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${joint_name}">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="motor1">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+  </xacro:macro>
+
+  <xacro:transmission_block joint_name="lf_rot_1"/>
+  <xacro:transmission_block joint_name="lf_rot_2"/>
+  <xacro:transmission_block joint_name="lf_rot_3"/>
+  <xacro:transmission_block joint_name="rf_rot_1"/>
+  <xacro:transmission_block joint_name="rf_rot_2"/>
+  <xacro:transmission_block joint_name="rf_rot_3"/>
+  <xacro:transmission_block joint_name="lb_rot_1"/>
+  <xacro:transmission_block joint_name="lb_rot_2"/>
+  <xacro:transmission_block joint_name="lb_rot_3"/>
+  <xacro:transmission_block joint_name="rb_rot_1"/>
+  <xacro:transmission_block joint_name="rb_rot_2"/>
+  <xacro:transmission_block joint_name="rb_rot_3"/>
+
+
+
+</robot>

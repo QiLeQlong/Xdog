@@ -1,0 +1,794 @@
+<?xml version="1.0"?>
+<robot name="xdog" >
+
+
+
+  <link
+    name="body_Link">
+    <inertial>
+      <origin
+        xyz="0.0100797468384241 -6.6942978937945E-15 0.014671259999792"
+        rpy="0 0 0" />
+      <mass
+        value="0.144204255125477" />
+      <inertia
+        ixx="1.68530851280875E-06"
+        ixy="6.4893603395572E-18"
+        ixz="-3.26289108002854E-06"
+        iyy="0.000221482596538362"
+        iyz="1.94206212542256E-18"
+        izz="0.000219797288025553" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/body_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/body_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_13">
+    <inertial>
+      <origin
+        xyz="0.00589211277664776 -0.00486711947882862 -0.00589211281764702"
+        rpy="0 0 0" />
+      <mass
+        value="0.0222474344540392" />
+      <inertia
+        ixx="1.05777822701644E-06"
+        ixy="1.75424012982471E-07"
+        ixz="-9.25745238901287E-08"
+        iyy="8.38710703025696E-07"
+        iyz="1.01496626639833E-07"
+        izz="1.05777822724891E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_13.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_13.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_13"
+    type="revolute">
+    <origin
+      xyz="0.083446 0.05 0"
+      rpy="1.5708 -8.6736E-18 1.5708" />
+    <parent
+      link="body_Link" />
+    <child
+      link="Link_13" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="1"
+      velocity="3.14" />
+    <safety_controller
+      soft_upper="1.57"
+      soft_lower="-1.57"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_12">
+    <inertial>
+      <origin
+        xyz="0.032500000000006 -3.69149155687865E-15 0.00597908298070466"
+        rpy="0 0 0" />
+      <mass
+        value="0.0122823538406087" />
+      <inertia
+        ixx="4.27588858132138E-06"
+        ixy="2.91991621249905E-32"
+        ixz="-3.31929666068204E-19"
+        iyy="4.27588858132138E-06"
+        iyz="3.49721018702583E-19"
+        izz="5.84880205093844E-32" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_12"
+    type="revolute">
+    <origin
+      xyz="0 -0.012087 0"
+      rpy="-1.5708 -5.5511E-17 -1.5708" />
+    <parent
+      link="Link_13" />
+    <child
+      link="Link_12" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="1"
+      velocity="3.14" />
+    <safety_controller
+      soft_upper="1.57"
+      soft_lower="-1.57"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_11">
+    <inertial>
+      <origin
+        xyz="0.0245886888409639 -0.00138827725185645 0.00591127232774293"
+        rpy="0 0 0" />
+      <mass
+        value="0.0211642503887348" />
+      <inertia
+        ixx="3.69491793613372E-07"
+        ixy="6.22688045554913E-08"
+        ixz="5.3833881000221E-07"
+        iyy="5.17389351902357E-06"
+        iyz="-1.43507075395679E-08"
+        izz="4.8135454149822E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_11"
+    type="revolute">
+    <origin
+      xyz="0.065 0 0"
+      rpy="-2.9633E-16 1.9559E-16 1.2326E-32" />
+    <parent
+      link="Link_12" />
+    <child
+      link="Link_11" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="1"
+      velocity="3.14" />
+    <safety_controller
+      soft_upper="1.57"
+      soft_lower="-1.57"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_23">
+    <inertial>
+      <origin
+        xyz="-0.00589211278446113 -0.00486712588930755 -0.00589211278452147"
+        rpy="0 0 0" />
+      <mass
+        value="0.0222474343441444" />
+      <inertia
+        ixx="1.06158508682657E-06"
+        ixy="-1.75490176065327E-07"
+        ixz="9.25745239302252E-08"
+        iyy="8.38710703268066E-07"
+        iyz="1.01562555057677E-07"
+        izz="1.06158508682599E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_23.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_23.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_23"
+    type="revolute">
+    <origin
+      xyz="0.083446 -0.05 0"
+      rpy="1.5708 5.9864E-13 1.5708" />
+    <parent
+      link="body_Link" />
+    <child
+      link="Link_23" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="1"
+      velocity="3.14" />
+    <safety_controller
+      soft_upper="1.57"
+      soft_lower="-1.57"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_22">
+    <inertial>
+      <origin
+        xyz="0.0325000000000334 -7.03603841856193E-15 -0.00597908298070209"
+        rpy="0 0 0" />
+      <mass
+        value="0.0122823538406087" />
+      <inertia
+        ixx="4.27588858132137E-06"
+        ixy="-2.97559937989751E-32"
+        ixz="3.36258783018814E-19"
+        iyy="4.27588858132137E-06"
+        iyz="3.53149509808777E-19"
+        izz="5.95900842341938E-32" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_22.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_22.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_22"
+    type="revolute">
+    <origin
+      xyz="0 -0.012087 0"
+      rpy="-1.5708 -2.2205E-16 -1.5708" />
+    <parent
+      link="Link_23" />
+    <child
+      link="Link_22" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="1"
+      velocity="3.14" />
+    <safety_controller
+      soft_upper="1.57"
+      soft_lower="-1.57"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_21">
+    <inertial>
+      <origin
+        xyz="0.024583786441454 -0.00139405658271936 -0.00591062094058505"
+        rpy="0 0 0" />
+      <mass
+        value="0.0211575776279215" />
+      <inertia
+        ixx="3.695056504152E-07"
+        ixy="5.89881536992194E-08"
+        ixz="-5.38512272494569E-07"
+        iyy="5.17472254572912E-06"
+        iyz="1.43045490492441E-08"
+        izz="4.81430144751335E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_21.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_21.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_21"
+    type="revolute">
+    <origin
+      xyz="0.065 0 0"
+      rpy="-5.2549E-13 2.5997E-13 1.1102E-16" />
+    <parent
+      link="Link_22" />
+    <child
+      link="Link_21" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="1"
+      velocity="3.14" />
+    <safety_controller
+      soft_upper="1.57"
+      soft_lower="-1.57"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_33">
+    <inertial>
+      <origin
+        xyz="-0.00589210844151633 -0.00486712091968915 -0.00589211564371661"
+        rpy="0 0 0" />
+      <mass
+        value="0.0222474249737408" />
+      <inertia
+        ixx="1.06158381911317E-06"
+        ixy="-1.75489104820104E-07"
+        ixz="9.25739533220327E-08"
+        iyy="8.38709582675458E-07"
+        iyz="1.01562035051974E-07"
+        izz="1.0615830141383E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_33.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_33.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_33"
+    type="revolute">
+    <origin
+      xyz="-0.071954 -0.05 0"
+      rpy="1.5708 5.9865E-13 1.5708" />
+    <parent
+      link="body_Link" />
+    <child
+      link="Link_33" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="1"
+      velocity="3.14" />
+    <safety_controller
+      soft_upper="1.57"
+      soft_lower="-1.57"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_32">
+    <inertial>
+      <origin
+        xyz="0.032500000000006 -7.16093850883226E-15 -0.00597908298070464"
+        rpy="0 0 0" />
+      <mass
+        value="0.0122823538406087" />
+      <inertia
+        ixx="4.27588858132138E-06"
+        ixy="-3.00911507482815E-32"
+        ixz="3.37411326343608E-19"
+        iyy="4.27588858132138E-06"
+        iyz="3.55281448875514E-19"
+        izz="6.02693112478128E-32" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_32.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_32.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_32"
+    type="revolute">
+    <origin
+      xyz="0 -0.012087 0"
+      rpy="-1.5708 -4.6384E-17 -1.5708" />
+    <parent
+      link="Link_33" />
+    <child
+      link="Link_32" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="1"
+      velocity="3.14" />
+    <safety_controller
+      soft_upper="1.57"
+      soft_lower="-1.57"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_31">
+    <inertial>
+      <origin
+        xyz="0.024583798575402 -0.00139405515632768 -0.0059106159242525"
+        rpy="0 0 0" />
+      <mass
+        value="0.0211575679729923" />
+      <inertia
+        ixx="3.69504604037117E-07"
+        ixy="5.89887459631567E-08"
+        ixz="-5.38509568976572E-07"
+        iyy="5.17471503754707E-06"
+        iyz="1.43048206907229E-08"
+        izz="4.81429502690449E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_31.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_31.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_31"
+    type="revolute">
+    <origin
+      xyz="0.065 0 0"
+      rpy="-5.2564E-13 2.6012E-13 5.5511E-17" />
+    <parent
+      link="Link_32" />
+    <child
+      link="Link_31" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="1"
+      velocity="3.14" />
+    <safety_controller
+      soft_upper="1.57"
+      soft_lower="-1.57"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_43">
+    <inertial>
+      <origin
+        xyz="0.00589211278448006 -0.00486711942572839 -0.00589211278450374"
+        rpy="0 0 0" />
+      <mass
+        value="0.0222474343441445" />
+      <inertia
+        ixx="1.05777821597204E-06"
+        ixy="1.75424014223649E-07"
+        ixz="-9.25745239301217E-08"
+        iyy="8.38710703269563E-07"
+        iyz="1.01496631855918E-07"
+        izz="1.05777821597196E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_43.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_43.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_43"
+    type="revolute">
+    <origin
+      xyz="-0.071954 0.05 0"
+      rpy="1.5708 2.4568E-31 1.5708" />
+    <parent
+      link="body_Link" />
+    <child
+      link="Link_43" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="1"
+      velocity="3.14" />
+    <safety_controller
+      soft_upper="1.57"
+      soft_lower="-1.57"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_42">
+    <inertial>
+      <origin
+        xyz="0.032500000000006 -3.77475828372553E-15 0.00597908298070462"
+        rpy="0 0 0" />
+      <mass
+        value="0.0122823538406087" />
+      <inertia
+        ixx="4.27588858132138E-06"
+        ixy="2.94103044202852E-32"
+        ixz="-3.38728650262078E-19"
+        iyy="4.27588858132138E-06"
+        iyz="3.46071898281109E-19"
+        izz="5.88478166292039E-32" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_42.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_42.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_42"
+    type="revolute">
+    <origin
+      xyz="0 -0.012087 0"
+      rpy="-1.5708 -1.6654E-16 -1.5708" />
+    <parent
+      link="Link_43" />
+    <child
+      link="Link_42" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="1"
+      velocity="3.14" />
+    <safety_controller
+      soft_upper="1.57"
+      soft_lower="-1.57"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="Link_41">
+    <inertial>
+      <origin
+        xyz="0.0245886903668074 -0.00138827750846166 0.00591127172128423"
+        rpy="0 0 0" />
+      <mass
+        value="0.0211642494468741" />
+      <inertia
+        ixx="3.69491649086748E-07"
+        ixy="6.22686910424057E-08"
+        ixz="5.38338441295407E-07"
+        iyy="5.1738924586767E-06"
+        iyz="-1.43506635566747E-08"
+        izz="4.81354449246951E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_41.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xdog_description/meshes/Link_41.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_41"
+    type="revolute">
+    <origin
+      xyz="0.065 0 0"
+      rpy="-5.8578E-17 1.0149E-16 0" />
+    <parent
+      link="Link_42" />
+    <child
+      link="Link_41" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="1"
+      velocity="3.14" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+    <safety_controller
+      soft_upper="1.57"
+      soft_lower="-1.57"
+      k_velocity="0" />
+  </joint>
+
+</robot>
